@@ -1,0 +1,45 @@
+<div class="container">
+
+  <div class="form-container"></div>
+  <h2 class="form-title"> Add News </h2>
+  
+  <form [formGroup]="postNewsForm" >
+    <div>
+      <label for="title">Title:</label>
+      <input type="text" id="title" formControlName="title" required>
+    </div>
+  
+    <div>
+      <label for="date">Date:</label>
+      <input type="date" id="date" formControlName="date" required>
+    </div>
+  
+    <div>
+      <label for="type">Type:</label>
+      <input type="text" id="type" formControlName="type" required>
+    </div>
+  
+    <div>
+      <label for="description">Description:</label>
+      <textarea id="description" formControlName="description" required></textarea>
+    </div>
+  
+    <div>
+      <label for="photo">Photo:</label>
+      <input type="text" id="photo" formControlName="photo" required>
+    </div>
+  
+    
+  
+    <button type="submit" (click)="postNews()">Submit</button>
+  </form>
+  
+  
+  
+
+
+
+</div>
+
+
+

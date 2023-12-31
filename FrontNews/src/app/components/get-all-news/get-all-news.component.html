@@ -1,0 +1,35 @@
+<table>
+  <thead>
+    <tr>
+      <th>ACTION</th>
+      <th>Id</th>
+      <th>Title</th>
+      <th>Date</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Photo</th>
+      <th>Created At</th>
+      <th>Update At</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let news of newss">
+      <td>
+        <button class="btn-update" routerLink="/news/{{news.id}}"> UPDATE </button>
+        <button class="btn-delete" (click)="deleteNews(news.id)"> DELETE </button>
+      </td>
+      <td>{{ news.id }}</td>
+      <td>{{ news.title }}</td>
+      <td>{{ news.date }}</td>
+      <td>{{ news.type }}</td>
+      <td>{{ news.description }}</td>
+      <td>{{ news.photo }}</td>
+      <td>{{ news.createdAt }}</td>
+      <td>{{ news.createdAt }}</td>
+      
+    </tr>
+  </tbody>
+</table>
+<br>
+<button  class="btn-new" routerLink="/news">Add a New News </button>
+
